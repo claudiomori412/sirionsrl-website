@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 import "swiper/css";
 import pTop1 from "../../img/products/top/F.A. 24.jpeg"
 import pTop2 from "../../img/products/top/FN 188 Y 2.jpeg"
-import pTop3 from "../../img/products/top/Fp Daily 3.jpeg"
+import pTop3 from "../../img/products/top/top-3.jpeg"
 import pTop4 from "../../img/products/top/R60 2.jpeg"
 import pTop5 from "../../img/products/top/Tappo24.jpeg"
 import pC1 from "../../img/products/central/Catad. 2024.jpeg"
