@@ -31,3 +31,39 @@ body {
     text-wrap: balance;
   }
 }
+
+
+.rettangolo {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  background-color: red;
+  overflow: hidden; /* Nasconde parti dell'::before che sporgono */
+}
+
+.rettangolo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: -10px; /* Regola questo valore per controllare l'angolazione */
+  background-color: red;
+  transform: skewY(-5deg); /* Angolo di inclinazione */
+  transform-origin: bottom left;
+}
+
+.swiper-button-next::after {
+  color: #F5742E;
+  font-weight: 600;
+}
+
+.swiper-button-prev::after {
+  color: #F5742E;
+  font-weight: 600;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
