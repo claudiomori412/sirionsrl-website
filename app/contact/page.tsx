@@ -73,7 +73,6 @@ export default function Page() {
                     <p className="text-customBlack font-extrabold">Società</p>
                     <p className="text-customBlack">P.iva / CF 01731880058</p>
                     <p className="text-customBlack">C.C.I.A.A. n. 31006</p>
-                    <p className="text-customBlack">Trib. Asti</p>
                     <p className="text-customBlack">Capitale Sociale € 1.250.000 i.v.</p>
                 </div>
             </div>
