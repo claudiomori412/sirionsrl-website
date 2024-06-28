@@ -95,6 +95,11 @@ const navbarClass = scrollY > 0 ? 'bg-customBlueRgb' : '';
             
 
               <Link href="/contact" className="text-customBlack  hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium">Contatti</Link>
+
+              <Link href="/en" className="hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                  EN <img src="https://www.deltats.eu/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png" alt="IT" data-no-retina="" className="ml-1 w-4 h-auto" />
+                </Link>
+              
             </div>
           </div>
           <div className="md:hidden flex items-center">

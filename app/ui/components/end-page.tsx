@@ -25,17 +25,16 @@ const EndPage = (props: any) => {
         <div className="w-full md:w-[70%] flex flex-col md:flex-row items-start md:items-center justify-between">
           <div>
             <h1 className="text-5xl text-customWhite  text-left font-extrabold mb-4 md:mb-0">
-              Ricerca e Innovazione
+              {props.text1}
             </h1>
             <p className="text-left text-customWhite ">
-              Scopri come Sirion si impegna nella ricerca continua per innovare
-              e soddisfare le esigenze dei clienti nel settore automobilistico.
+              {props.text2}
             </p>
           </div>
           {/* Bottone */}
           <div className="mt-4 md:mt-0 md:ml-4">
-            <Link href="/contact">
-              <Button text="Contattaci" />
+            <Link href={props.href}>
+              <Button text={props.text3} />
             </Link>
           </div>
         </div>

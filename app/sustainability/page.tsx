@@ -13,6 +13,8 @@ import EndPage from '../ui/components/end-page';
 import Description from '../ui/components/description';
 import Link from 'next/link';
 import Button from '../ui/components/button';
+import Footer from '../ui/dashboard/footer';
+import Navbar from '../ui/dashboard/navbar';
 
 export default function Page() {
     const [showRobot, setShowRobot] = useState(true)
@@ -43,6 +45,7 @@ export default function Page() {
 
     return (
         <>
+            <Navbar/>
             <Title title={'Sostenibilità'} />
             <Description 
                 text={"In SIRION SRL siamo impegnati non solo a fornire prodotti di alta qualità, ma anche a farlo in modo sostenibile e responsabile nei confronti dell'ambiente. Riconosciamo l'importanza di ridurre l'impatto ambientale delle nostre operazioni e stiamo adottando misure concrete per raggiungere questo obiettivo. Abbiamo avviato un processo di calcolo delle emissioni di CO2 generate dalle nostre attività e ci impegniamo a compensarle attraverso certificazioni carbon footprint, garantendo così un'impronta ecologica sempre più ridotta."} 
@@ -72,7 +75,9 @@ export default function Page() {
                     <p className="mb-4 text-customBlack">L’obiettivo di Sirion srl è quello di crescere anche dal punto dell’ecosostenibilità, a tal punto Sirion è già al lavoro con un progetto pluriennale che permetterà entro la fine del 2026 di autoprodurre energia dai pannelli fotovoltaici per coprire fino al 75% del fabbisogno, questo mediante anche impianti elettrici di ultima generazione</p>
                 </div>
             </div>
-            <EndPage></EndPage>
+           
+<EndPage text1={"Ricerca e Innovazione"} text2={"Scopri come Sirion si impegna nella ricerca continua per innovare e soddisfare le esigenze dei clienti nel settore automobilistico."} text3={"Contattaci"} href={"/contact"}></EndPage>
+<Footer></Footer>
         </>
       );
 }

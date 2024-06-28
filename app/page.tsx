@@ -21,6 +21,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import TitleHome from "./ui/components/title-home";
 import Description from "./ui/components/description";
+import Footer from "./ui/dashboard/footer";
+import Navbar from "./ui/dashboard/navbar";
 
 export default function Home() {
 
@@ -59,6 +61,7 @@ export default function Home() {
 
   return (
     <>
+     <Navbar/>
     <Head>
         {/* Aggiungi le meta tag per le keyword */}
         <meta name="keywords" content="illuminazione, stampaggio plastico, iniezione plastica, automotive, progettazione, qualità, affidabilità" />
@@ -173,7 +176,10 @@ export default function Home() {
   </div>
 </div>
 
-    <EndPage></EndPage>
+    
+<EndPage text1={"Ricerca e Innovazione"} text2={"Scopri come Sirion si impegna nella ricerca continua per innovare e soddisfare le esigenze dei clienti nel settore automobilistico."} text3={"Contattaci"} href={"/contact"}></EndPage>
+<Footer></Footer>
 </>
+
   );
 }

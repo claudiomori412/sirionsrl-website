@@ -11,7 +11,7 @@ const Description = (props: any) => {
         {props.text2 && <p className="text-customBlack justify-center text-center text-xl">{props.text2}</p>}
         {props.text3 && <p className="text-customBlack justify-center text-center text-xl">{props.text3}</p>}
         {props.button && <Link className=" mt-5" href="/contact" >
-                    <Button text="CONTATTACI" />
+                    <Button text={props.text4} />
                 </Link>}
         
     </div>

@@ -19,10 +19,13 @@ import { Navigation } from "swiper/modules";
 import "swiper/css/pagination";
 import 'swiper/css/navigation';
 import "swiper/css";
+import Footer from "../ui/dashboard/footer";
+import Navbar from "../ui/dashboard/navbar";
 
 export default function Page() {
     return (
         <>
+         <Navbar/>
           <Title title={"Know How"}  description={"Scopri il know-how decennale di Sirion nel settore dell’illuminazione per il mercato automotive. La nostra flessibilità e esperienza ci rendono un partner affidabile per i produttori di componenti auto italiani ed esteri."} />
           <Description text={"Sono le competenze e la dedizione del nostro team che ci consentono di eccellere nel settore automobilistico, offrendo un prodotto di alta qualità rispettando tutte le richieste dei nostri clienti"}></Description>
 
@@ -117,7 +120,9 @@ export default function Page() {
             </div>
 
          
-            <EndPage></EndPage>
+            
+<EndPage text1={"Ricerca e Innovazione"} text2={"Scopri come Sirion si impegna nella ricerca continua per innovare e soddisfare le esigenze dei clienti nel settore automobilistico."} text3={"Contattaci"} href={"/contact"}></EndPage>
+<Footer></Footer>
         </>
     );
 }

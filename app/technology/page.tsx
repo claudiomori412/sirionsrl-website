@@ -1,30 +1,19 @@
 "use client"
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-import 'swiper/css/pagination';
-import 'swiper/css';
-
 import Title from '../ui/components/title';
 import Image from 'next/image';
-import TechImg1 from './../../img/technology/Calibro FP.jpeg'
 import TechImg2 from './../../img/technology/arzuffi.jpeg'
 import TechImg3 from './../../img/technology/engel 800t.jpeg'
-import TechImg4 from './../../img/technology/galileo.jpeg'
-import TechImg5 from './../../img/technology/image.GUNGN2.png'
-import TechImg6 from './../../img/technology/image.QCILN2.png'
-import TechImg7 from './../../img/technology/image.ZO71M2.png'
 import TechImg8 from './../../img/technology/lab new 1.jpeg'
-import TechImg9 from './../../img/technology/lab new.jpeg'
 import TechImg10 from './../../img/technology/posaggio saldatura fp.jpeg'
-import TechImg11 from './../../img/technology/presse sirion.jpeg'
-import TechImg12 from './../../img/technology/test acqua.jpeg'
-
 import EndPage from '../ui/components/end-page';
+import Footer from '../ui/dashboard/footer';
+import Navbar from '../ui/dashboard/navbar';
 
 export default function Page() {
 
     return (
         <>
+            <Navbar/>
             <Title title={'Tecnologia'} />
 
 
@@ -77,7 +66,9 @@ Sirion presenta il suo nuovo laboratorio, recentemente ristrutturato e dotato di
                 </div>
             </div>
 
-            <EndPage></EndPage>
+            
+<EndPage text1={"Ricerca e Innovazione"} text2={"Scopri come Sirion si impegna nella ricerca continua per innovare e soddisfare le esigenze dei clienti nel settore automobilistico."} text3={"Contattaci"} href={"/contact"}></EndPage>
+<Footer></Footer>
         </>
       );
 }

@@ -2,6 +2,8 @@ import Title from "../ui/components/title";
 import Image from "next/image";
 import imageUrl from "../../img/default/map.jpg"
 import Link from "next/link";
+import Footer from "../ui/dashboard/footer";
+import Navbar from "../ui/dashboard/navbar";
 
 
 export default function Page() {
@@ -9,6 +11,7 @@ export default function Page() {
    
     return (
         <>
+            <Navbar/>
             <Title title={'Whistleblowing'} />
             <div className="bg-customWhite p-10 md:p-20">
                
@@ -20,6 +23,7 @@ export default function Page() {
                     <p className="text-customBlack mb-4">Tutorial per effettuare segnalazione scritta <Link target="_blank" style={{textDecoration:'underline', color:'#004F92'}} href={'https://www.deltats.eu/wp-content/uploads/2024/04/effettuare-segnalazione-scritta.mp4'}>link</Link></p>
                     <p className="text-customBlack ">Tutorial per effettuare segnalazione vocale <Link target="_blank" style={{textDecoration:'underline', color:'#004F92'}} href={'https://www.deltats.eu/wp-content/uploads/2024/04/segnalazione-vocale.mp4'}>link</Link></p>
             </div>
+            <Footer></Footer>
         </>
     );
 }

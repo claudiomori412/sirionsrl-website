@@ -1,48 +1,46 @@
 "use client"
 import Image from "next/image";
-import Description from "../ui/components/description";
-import Title from "../ui/components/title";
+import Description from "../../ui/components/description";
+import Title from "../../ui/components/title";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation} from "swiper/modules";
 import "swiper/css/pagination";
 import 'swiper/css/navigation';
 import "swiper/css";
-import pTop1 from "../../img/products/top/F.A. 24.jpeg"
-import pTop2 from "../../img/products/top/FN 188 Y 2.jpeg"
-import pTop3 from "../../img/products/top/top-3.jpeg"
-import pTop4 from "../../img/products/top/R60 2.jpeg"
-import pTop5 from "../../img/products/top/Tappo24.jpeg"
-import pC1 from "../../img/products/central/Catad. 2024.jpeg"
-import pC2 from "../../img/products/central/EVO 1.jpeg"
-import pC3 from "../../img/products/central/F.A 2019 2.jpeg"
-import pC4 from "../../img/products/central/FN 188 Y 1.jpeg"
-import pC5 from "../../img/products/central/Roof Light.jpeg"
-import pB1 from "../../img/products/bottom/3STOP 2021.jpeg"
-import pB2 from "../../img/products/bottom/E84 BMW.jpeg"
-import pB3 from "../../img/products/bottom/Tyco 1.jpeg"
-import pB4 from "../../img/products/bottom/Tyco 2.jpeg"
-import Link from "next/link";
-import Button from "../ui/components/button";
-import Footer from "../ui/dashboard/footer";
-import Navbar from "../ui/dashboard/navbar";
+import pTop1 from "../../../img/products/top/F.A. 24.jpeg"
+import pTop2 from "../../../img/products/top/FN 188 Y 2.jpeg"
+import pTop3 from "../../../img/products/top/top-3.jpeg"
+import pTop4 from "../../../img/products/top/R60 2.jpeg"
+import pTop5 from "../../../img/products/top/Tappo24.jpeg"
+import pC1 from "../../../img/products/central/Catad. 2024.jpeg"
+import pC2 from "../../../img/products/central/EVO 1.jpeg"
+import pC3 from "../../../img/products/central/F.A 2019 2.jpeg"
+import pC4 from "../../../img/products/central/FN 188 Y 1.jpeg"
+import pC5 from "../../../img/products/central/Roof Light.jpeg"
+import pB1 from "../../../img/products/bottom/3STOP 2021.jpeg"
+import pB2 from "../../../img/products/bottom/E84 BMW.jpeg"
+import pB3 from "../../../img/products/bottom/Tyco 1.jpeg"
+import pB4 from "../../../img/products/bottom/Tyco 2.jpeg"
+import Footer from "@/app/ui/dashboard-en/footer";
+import Navbar from "@/app/ui/dashboard-en/navbar";
 
 
 export default function Page() {
     return (
         <>
-         <Navbar/>
+        <Navbar/>
         <div style={{backgroundColor:'white', paddingBottom:'100px'}}>
-            <Title title={'Prodotti'} />
+            <Title title={'Products'} />
             <Description 
-                text={"Da SIRION SRL  siamo fieri di presentare una vasta gamma di componenti in plastica di alta qualità progettati appositamente per il settore automobilistico commerciale."} 
-                text2={"I nostri prodotti includono una vasta selezione di fanali anteriori e posteriori, indicatori di direzione, fendinebbia, luci di ingombro, ambient light, blind spot, terzi stop e catadiottri, tutti rigorosamente progettati e realizzati per garantire prestazioni affidabili e durature."}
+                text={"At SIRION SRL, we are proud to present a wide range of high-quality plastic components specifically designed for the commercial automotive sector."} 
+                text2={"Our products include a wide selection of front and rear lights, turn signals, fog lights, clearance lights, ambient lights, blind spots, third brake lights, and reflectors, all rigorously designed and manufactured to ensure reliable and long-lasting performance."}
             />
             <Swiper
             spaceBetween={20}
             modules={[Navigation]}
-            slidesPerView={1} // Numero di slide visibili contemporaneamente
-            centeredSlides={true} // Centra le slide attive
-            navigation={true} // Abilita la navigazione
+            slidesPerView={1} // Number of slides visible at once
+            centeredSlides={true} // Center the active slides
+            navigation={true} // Enable navigation
            style={{background:'white',height:'30vh'}}
             >
                 <SwiperSlide>
@@ -71,13 +69,13 @@ export default function Page() {
                     </div>
                 </SwiperSlide>
             </Swiper>
-            <Description text={"Siamo impegnati a soddisfare le esigenze specifiche dei nostri clienti, offrendo soluzioni su misura che rispecchiano la nostra costante ricerca di innovazione e qualità. Grazie alla nostra esperienza nel settore e alla nostra attenzione ai dettagli, ci assicuriamo che ogni prodotto che lascia le nostre strutture sia all'altezza degli standard più elevati."} />
+            <Description text={"We are committed to meeting the specific needs of our clients by offering customized solutions that reflect our constant pursuit of innovation and quality. Thanks to our experience in the field and our attention to detail, we ensure that every product leaving our facilities meets the highest standards."} />
             <Swiper
             spaceBetween={20}
             modules={[Navigation]}
-            slidesPerView={1} // Numero di slide visibili contemporaneamente
-            centeredSlides={true} // Centra le slide attive
-            navigation={true} // Abilita la navigazione
+            slidesPerView={1} // Number of slides visible at once
+            centeredSlides={true} // Center the active slides
+            navigation={true} // Enable navigation
             
             style={{background:'white',height:'30vh'}}
             >
@@ -108,15 +106,15 @@ export default function Page() {
                     </div>
                 </SwiperSlide>
             </Swiper>
-            <Description button={true} text4={"Contattaci"}  text={"Scoprite come i nostri prodotti possono migliorare le prestazioni e l'aspetto dei vostri veicoli commerciali. Siamo qui per offrire soluzioni affidabili e di qualità che contribuiscano al successo della vostra attività"} />
+            <Description button={true} text4={"Contact us"} text={"Discover how our products can enhance the performance and appearance of your commercial vehicles. We are here to offer reliable and quality solutions that contribute to the success of your business."} />
            
             
             <Swiper
             spaceBetween={20}
             modules={[Navigation]}
-            slidesPerView={1} // Numero di slide visibili contemporaneamente
-            centeredSlides={true} // Centra le slide attive
-            navigation={true} // Abilita la navigazione
+            slidesPerView={1} // Number of slides visible at once
+            centeredSlides={true} // Center the active slides
+            navigation={true} // Enable navigation
            style={{background:'white',height:'30vh'}}
             >
                 
