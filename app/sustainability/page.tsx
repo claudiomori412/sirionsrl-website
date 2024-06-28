@@ -58,7 +58,7 @@ export default function Page() {
                     <h4 className="mb-4 text-customBlack text-3xl font-medium">CO2 Carbon footprint compensation</h4>
                     <p className="mb-4 text-customBlack">Sirion lavora sempre con un occhio alla sostenibilità e con l’aiuto della società @Upgreene è già stato emesso il primo report del CALCOLO DELL’ IMPRONTA DI CARBONIO CFP DI ORGANIZZAZIONE  con lo scopo di calcolare l’impronta emissiva di organizzazione di Sirion srl e quindi di quantificare l’impatto sul cambiamento climatico delle singole azioni riconducibili alle attività della sede.
                         Il totale delle emissioni di CO2 calcolate sarà interamente compensato da UpGreene ,consentendo a Sirion di intraprendere un percorso verso la neutralità climatica.</p>
-                        <Link target="_blank" href={'/CALCOLO_DELL’_IMPRONTA_DI_CARBONIO_CFPDI_ORGANIZZAZIONE_Sirion_Srl.pdf'}>
+                        <Link target="_blank" href={'/impronta-CO2.pdf'}>
                             <Button text="IMPRONTA C02" />
                         </Link>
                 </div>

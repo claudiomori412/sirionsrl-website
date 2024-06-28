@@ -64,18 +64,19 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="container mx-auto flex justify-between py-7">
-          <div>
-            <div>
-              <p>Sirion Srl - P.iva / C.F. 01731880058 </p>
-            </div>
+        <div className="container mx-auto flex flex-col md:flex-row justify-between py-7">
+          <div className="mb-4 md:mb-0">
+            <p>Sirion Srl - P.iva / C.F. 01731880058 </p>
           </div>
           <div>
-            <div>
-              <ul className="container mx-auto flex">
-                <li ><Link target="_blank" className="mr-4" href={'Sirion-informativa-privacy.pdf'}>Privacy</Link></li>
-              </ul>
-            </div>
+            <ul className="flex flex-col md:flex-row">
+              <li className="mb-2 md:mb-0 md:mr-4">
+                <Link target="_blank" href={'Privacy Sirion.pdf'}>Privacy</Link>
+              </li>
+              <li className="md:mr-4">
+                <Link target="_blank" href={'Codice Etico Sirion.pdf'}>Codice Etico</Link>
+              </li>
+            </ul>
           </div>
         </div>
       </footer>
