@@ -170,6 +170,7 @@ const Navbar = () => {
               <Link href="/technology" className="text-customWhite hover:text-gray-300 px-3 py-2 rounded-md text-xl font-medium">Tecnologia</Link>
               <Link href="/sustainability" className="text-customWhite hover:text-gray-300 px-3 py-2 rounded-md text-xl font-medium">Sostenibilità</Link>
               <Link href="/contact" className="text-customWhite hover:text-gray-300 px-3 py-2 rounded-md text-xl font-medium">Contatti</Link>
+              <div></div>
           </div>
       </div>
     }

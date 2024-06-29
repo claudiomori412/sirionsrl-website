@@ -151,6 +151,7 @@ const Navbar = () => {
               <Link href="/en/technology" className="text-customWhite hover:text-gray-300 px-3 py-2 rounded-md text-xl font-medium">Technology</Link>
               <Link href="/en/sustainability" className="text-customWhite hover:text-gray-300 px-3 py-2 rounded-md text-xl font-medium">Sustainability</Link>
               <Link href="/en/contact" className="text-customWhite hover:text-gray-300 px-3 py-2 rounded-md text-xl font-medium">Contacts</Link>
+              <div></div>
             </div>
           </div>
         )}
