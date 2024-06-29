@@ -21,7 +21,7 @@ export default function Page() {
                     <div className="relative w-full h-96">
                         <Image src={TechImg2} alt="Safety Valves Image" layout="fill" objectFit="cover"/>
                     </div>
-                    <div className="bg-customBlueRgb p-6" style={{height:'650px'}}>
+                    <div className="bg-customBlueRgb p-6" style={{height:'670px'}}>
                         <h4 className="mb-2 text-customWhite text-3xl font-medium">Aluminizing</h4>
                         <p className="text-customWhite mb-2">
                         Our state-of-the-art aluminizing department includes an Arzuffi aluminizer with a diameter of 1800 mm and a height of 1600 mm, a Galileo with a diameter of 1340 mm and a height of 950 mm, and another Galileo with a diameter of 1100 mm and a height of 950 mm.<br />
@@ -34,7 +34,7 @@ export default function Page() {
                     <div className="relative w-full h-96">
                         <Image src={TechImg3} alt="Safety Valves Image" layout="fill" objectFit="cover"/>
                     </div>
-                    <div className="p-6"  style={{height:'650px', background:'#acacac'}}>
+                    <div className="p-6"  style={{height:'670px', background:'#acacac'}}>
                         <h4 className="mb-2 text-customWhite text-3xl font-medium">Injection Molding Machines</h4>
                         <p className="mb-2 text-customWhite">
                         Our department is equipped with 18 state-of-the-art injection molding machines, with capacities ranging from 125 to 1300 tons.<br />
@@ -51,7 +51,7 @@ export default function Page() {
                     <div className="relative w-full h-96">
                         <Image src={TechImg10} alt="Safety Valves Image" layout="fill" objectFit="cover"/>
                     </div>
-                    <div className=" p-6" style={{height:'650px', background:'#acacac'}}>
+                    <div className=" p-6" style={{height:'670px', background:'#acacac'}}>
                         <h4 className="mb-2 text-customWhite text-3xl font-medium">Welding Machines</h4>
                         <p className="text-customWhite mb-2">
                         Our dedicated welding machine park consists of 2 CEMAS vibration welders, 5 Branson vibration welders, and 3 Euromodel ultrasonic welders.<br />
@@ -65,7 +65,7 @@ export default function Page() {
                     <div className="relative w-full h-96">
                         <Image src={TechImg8} alt="Safety Valves Image" layout="fill" objectFit="cover"/>
                     </div>
-                    <div className="bg-customBlueRgb p-6" style={{height:'650px'}}>
+                    <div className="bg-customBlueRgb p-6" style={{height:'670px'}}>
                         <h4 className="mb-2 text-customWhite text-3xl font-medium">Laboratory</h4>
                         <p className="mb-2 text-customWhite">
                         Sirion presents its new laboratory, recently renovated and equipped with cutting-edge technologies to ensure precision and reliability in product testing and analysis. Among its main features are a photometric chamber, a corrosion test bench, a rain and dust resistance test bench, a static humidity cell, a vibrating bench, and a climatic cell. Our commitment to quality is reflected in the rigorous testing process, which ensures maximum performance and durability of components over time. Learn more about our testing and analysis capabilities and how we can contribute to the success of your projects in the automotive sector.</p>
