@@ -6,48 +6,79 @@ import Image from 'next/image';
 import Logo from "./../../../img/default/sirion.png"
 import IconHamburgerMenu from '../icon/hamburger';
 import IconClose from '../icon/close';
+import { useRouter } from 'next/navigation';
 
 const Navbar = () => {
 
-    const [isOpen, setIsOpen] = useState(false);
-    const [isOpenKH, setIsOpenKH] = useState(false);
-    const [isOpenProd, setIsOpenProd] = useState(false);
-    const [isOpenContact, setIsOpenContact] = useState(false);
-    const [scrollY, setScrollY] = useState(0);
-
-    const toggleMenu = () => {
-      setIsOpen(!isOpen);
-    };
-
-    const toggleMenuKH = () => {
-      setIsOpenKH(!isOpenKH);
-    };
-
-    const toggleMenuProd = () => {
-      setIsOpenProd(!isOpenProd);
-    };
-
-    const toggleMenuContact = () => {
-      setIsOpenContact(!isOpenContact);
-    };
-
-    useEffect(() => {
-      const handleScroll = () => {
-        setScrollY(window.scrollY);
-      };
   
-      // Aggiungi un listener per lo scroll
-      window.addEventListener('scroll', handleScroll);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isOpenKH, setIsOpenKH] = useState(false);
+  const [isOpenProd, setIsOpenProd] = useState(false);
+  const [isOpenContact, setIsOpenContact] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const toggleMenuKH = () => {
+    setIsOpenKH(!isOpenKH);
+  };
+
+  const toggleMenuProd = () => {
+    setIsOpenProd(!isOpenProd);
+  };
+
+  const toggleMenuContact = () => {
+    setIsOpenContact(!isOpenContact);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    // Aggiungi un listener per lo scroll
+    window.addEventListener('scroll', handleScroll);
+
+    // Pulisci il listener quando il componente viene smontato
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }, [isOpen]);
+
+  const changeLanguage = (url:string, newLang:string) => {
+    const urlParts = url.split('/');
+    const currentLang = urlParts[3]; // Assuming the language code is always the second part of the URL
+    if (urlParts[3] && urlParts[3].length === 2) { // Check if the part is a language code
+      urlParts[3] = newLang; // Replace the current language code with the new language code
+    } else {
+      urlParts.splice(3, 0, newLang); // If no language code, add new language code
+    }
+    return urlParts.join('/');
+  };
+
+  const router = useRouter();
   
-      // Pulisci il listener quando il componente viene smontato
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
-    }, []);
-const navbarClass = scrollY > 0 ? 'bg-customBlueRgb' : '';
+  const handleChangeLanguage = (newLang:string) => {
+    console.warn("click",newLang)
+    const currentUrl = window.location.href;
+    const newUrl = changeLanguage(currentUrl, newLang);
+    router.push(newUrl);
+  };
+
+  const navbarClass = scrollY > 0 ? 'bg-customBlueRgb' : '';
     return (
       <>
-<nav className={`fixed top-0 w-full z-10 transition-colors duration-300 bg-customLightGrey`}>
+<nav className={`fixed top-0 w-full z-10 transition-colors duration-300 bg-customLightGrey ${navbarClass}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
@@ -96,9 +127,9 @@ const navbarClass = scrollY > 0 ? 'bg-customBlueRgb' : '';
 
               <Link href="/contact" className="text-customBlack  hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium">Contatti</Link>
 
-              <Link href="/en" className="hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium flex items-center">
+              <div  onClick={(e) => { e.preventDefault(); handleChangeLanguage('en'); }} className="hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium flex items-center cursor-pointer">
                   EN <img src="https://www.deltats.eu/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png" alt="IT" data-no-retina="" className="ml-1 w-4 h-auto" />
-                </Link>
+                </div>
               
             </div>
           </div>
@@ -116,9 +147,16 @@ const navbarClass = scrollY > 0 ? 'bg-customBlueRgb' : '';
     </nav>
     {
       isOpen &&  <div className="fixed top-0 left-0 w-full h-full bg-customBlue z-50" onClick={toggleMenu}>
-        <button onClick={toggleMenu} className="absolute top-4 left-4 text-customWhite hover:text-gray-300 focus:outline-none text-3xl">
-            <IconClose></IconClose>
-          </button>
+       <div className="flex justify-between items-center px-4 py-2 bg-customBlue">
+        <button onClick={toggleMenu} className="text-customWhite hover:text-gray-300 focus:outline-none text-3xl">
+          <IconClose />
+        </button>
+        <div onClick={(e) => { e.preventDefault(); handleChangeLanguage('en'); }} className="hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium flex items-center cursor-pointer">
+          <img src="https://www.deltats.eu/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png" alt="EN" data-no-retina="" className="ml-1 w-6 h-auto" />
+        </div>
+      </div>
+
+       
           {/* Navbar links al centro orizzontalmente */}
           <div className="flex flex-col items-center justify-evenly flex-grow h-full">
               <Link href="/" className="text-customWhite hover:text-gray-300 px-3 py-2 rounded-md text-xl font-medium">Home</Link>

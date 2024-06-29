@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Logo from "./../../../img/default/sirion.png";
 import IconHamburgerMenu from '../icon/hamburger';
 import IconClose from '../icon/close';
+import { useRouter } from 'next/navigation';
 
 const Navbar = () => {
 
@@ -30,6 +31,26 @@ const Navbar = () => {
     const toggleMenuContact = () => {
       setIsOpenContact(!isOpenContact);
     };
+
+    const removeLanguage = (url:string) => {
+      const urlParts = url.split('/');
+      if (urlParts[3] && urlParts[3].length === 2) { // Check if the part is a language code
+        urlParts.splice(3, 1); // Remove the language code
+      }
+      return urlParts.join('/');
+    };
+
+  
+    const router = useRouter();
+    
+    const handleChangeLanguage = (newLang:string) => {
+      console.warn("click",newLang)
+      const currentUrl = window.location.href;
+      const newUrl = removeLanguage(currentUrl);
+      console.warn(newUrl)
+      router.push(newUrl);
+    };
+
 
     useEffect(() => {
       const handleScroll = () => {
@@ -92,9 +113,10 @@ const Navbar = () => {
 
                 <Link href="/en/contact" className="text-customBlack hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium">Contacts</Link>
                 
-                <Link href="/" className=" hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium flex items-center">
+              
+                <div  onClick={(e) => { e.preventDefault(); handleChangeLanguage('it'); }} className="hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium flex items-center cursor-pointer">
                   IT <img src="https://www.deltats.eu/wp-content/plugins/sitepress-multilingual-cms/res/flags/it.png" alt="IT" data-no-retina="" className="ml-1 w-4 h-auto" />
-                </Link>
+                </div>
               </div>
               <div className="md:hidden flex items-center">
                 <button onClick={toggleMenu} className="text-customBlack px-3 py-2 rounded-md text-3xl font-medium focus:outline-none">
@@ -107,9 +129,16 @@ const Navbar = () => {
 
         {isOpen && (
           <div className="fixed top-0 left-0 w-full h-full bg-customBlue z-50" onClick={toggleMenu}>
-            <button onClick={toggleMenu} className="absolute top-4 left-4 text-customWhite hover:text-gray-300 focus:outline-none text-3xl">
+            <div className="flex justify-between items-center px-4 py-2 bg-customBlue">
+            <button onClick={toggleMenu} className="text-customWhite hover:text-gray-300 focus:outline-none text-3xl">
               <IconClose />
             </button>
+            <div onClick={(e) => { e.preventDefault(); handleChangeLanguage('it'); }} className="hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium flex items-center cursor-pointer">
+              <img src="https://www.deltats.eu/wp-content/plugins/sitepress-multilingual-cms/res/flags/it.png" alt="IT" data-no-retina="" className="ml-1 w-7 h-auto" />
+            </div>
+          </div>
+
+            
             {/* Navbar links centered horizontally */}
             <div className="flex flex-col items-center justify-evenly flex-grow h-full">
               <Link href="/en" className="text-customWhite hover:text-gray-300 px-3 py-2 rounded-md text-xl font-medium">Home</Link>

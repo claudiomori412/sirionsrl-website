@@ -53,7 +53,7 @@ Sirion creates a healthy and respectful work environment for its employees by es
                             <Link target="_blank" href={'/Sirion S.r.l._ISO 9001 2015_cambio ragione sociale.pdf'}>
                                 <p className="text-customWhite mb-4 text-2xl">&#8226; ISO9001</p>
                             </Link>
-                            <Link target="_blank" href={'/Codice Etico Sirion.pdf'}>
+                            <Link target="_blank" href={'/en/documents/Ethical code Sirion.pdf'}>
                                 <p className="text-customWhite mb-4 text-2xl">&#8226; Code of Ethics</p>
                             </Link>
                             <Link target="_blank" href={'/impronta-new-CO2.pdf'}>

@@ -69,10 +69,10 @@ const Footer = () => {
           <div>
             <ul className="flex flex-col md:flex-row">
               <li className="mb-2 md:mb-0 md:mr-4">
-                <Link target="_blank" href={'Privacy Sirion.pdf'}>Privacy Policy</Link>
+                <Link target="_blank" href={'/en/documents/Privacy-en sirion.pdf'}>Privacy Policy</Link>
               </li>
               <li className="md:mr-4">
-                <Link target="_blank" href={'Codice Etico Sirion.pdf'}>Ethical Code</Link>
+                <Link target="_blank" href={'/en/documents/Ethical code Sirion.pdf'}>Ethical Code</Link>
               </li>
             </ul>
           </div>
