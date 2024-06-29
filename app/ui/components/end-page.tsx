@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const EndPage = (props: any) => {
   return (
-    <div className="relative w-full h-[20rem] flex items-center justify-center">
+    <div className="relative w-full h-[23rem] flex items-center justify-center">
       {/* Immagine */}
       <Image
         src={imageUrl}
