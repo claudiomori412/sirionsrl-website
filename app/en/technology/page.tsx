@@ -40,7 +40,7 @@ export default function Page() {
                         Our department is equipped with 18 state-of-the-art injection molding machines, with capacities ranging from 125 to 1300 tons.<br />
                         This variety allows us to produce a wide range of plastic components with superior precision and quality, effectively meeting the high demands of the automotive sector.<br />
                         Our team of experts works daily with passion and expertise to innovate and optimize our production processes.<br />
-                        Sirion's goal is to provide our customers with reliable, high-quality products, contributing to their success and the satisfaction of end-users.<br />
+                        Sirion’s goal is to provide our customers with reliable, high-quality products, contributing to their success and the satisfaction of end-users.<br />
                         Exploring our molding department, you will discover the commitment and professionalism we put into every stage of production.<br />
                         We are proud of our work and constantly strive to maintain excellent standards.</p>
                     </div>

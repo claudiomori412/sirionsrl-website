@@ -114,7 +114,7 @@ export default function Home() {
     </div>
     <div className="w-full md:w-1/2 max-w-md md:max-w-800 mx-4 my-2 bg-gray-200">
         <h4 className="mb-4 text-customBlack text-3xl font-medium">Know How</h4>
-        <p className="mb-4 text-customBlack">Discover Sirion's decades of know-how in the automotive lighting sector. Our flexibility and experience make us a reliable partner for Italian and foreign auto component manufacturers.</p>
+        <p className="mb-4 text-customBlack">Discover Sirion’s decades of know-how in the automotive lighting sector. Our flexibility and experience make us a reliable partner for Italian and foreign auto component manufacturers.</p>
         <Link href="/en/know-how"> 
             <Button text={"Discover"}></Button>
         </Link>
@@ -162,7 +162,7 @@ export default function Home() {
     </div>
     <div className="w-full md:w-1/2 max-w-md md:max-w-800 mx-4 my-2 bg-gray-200 md:order-first">
         <h4 className="mb-4 text-customBlack text-3xl font-medium">Media Reviews</h4>
-        <p className="mb-4 text-customBlack">We are proud to have been the focus of media attention. Newspaper reviews reflect our commitment and dedication in the sector. From respected journalists to industry magazines, our initiatives have captured everyone's interest. Discover what the media say about us and why we are a trusted choice in the market.</p>
+        <p className="mb-4 text-customBlack">We are proud to have been the focus of media attention. Newspaper reviews reflect our commitment and dedication in the sector. From respected journalists to industry magazines, our initiatives have captured everyone’s interest. Discover what the media say about us and why we are a trusted choice in the market.</p>
     </div>
 </div>
 

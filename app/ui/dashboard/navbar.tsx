@@ -7,6 +7,7 @@ import Logo from "./../../../img/default/sirion.png"
 import IconHamburgerMenu from '../icon/hamburger';
 import IconClose from '../icon/close';
 import { useRouter } from 'next/navigation';
+import Flag  from "./../../../img/flag/en.png"
 
 const Navbar = () => {
 
@@ -128,7 +129,9 @@ const Navbar = () => {
               <Link href="/contact" className="text-customBlack  hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium">Contatti</Link>
 
               <div  onClick={(e) => { e.preventDefault(); handleChangeLanguage('en'); }} className="hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium flex items-center cursor-pointer">
-                  EN <img src="https://www.deltats.eu/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png" alt="IT" data-no-retina="" className="ml-1 w-4 h-auto" />
+                  EN <Image
+                     src={Flag}
+                   alt="EN" data-no-retina="" className="ml-1 w-7 h-auto" />
                 </div>
               
             </div>
@@ -152,7 +155,8 @@ const Navbar = () => {
           <IconClose />
         </button>
         <div onClick={(e) => { e.preventDefault(); handleChangeLanguage('en'); }} className="hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium flex items-center cursor-pointer">
-          <img src="https://www.deltats.eu/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png" alt="EN" data-no-retina="" className="ml-1 w-6 h-auto" />
+          <Image 
+             src={Flag} alt="EN" data-no-retina="" className="ml-1 w-7 h-auto" />
         </div>
       </div>
 
