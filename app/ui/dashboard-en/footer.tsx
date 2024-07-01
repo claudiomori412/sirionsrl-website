@@ -27,10 +27,10 @@ const Footer = () => {
                   <ArrowRightIcon size='15px'></ArrowRightIcon>
                   <Link href="/en/contact" className="hover:text-customWhite" style={{marginLeft: '3px'}}>Contacts</Link>
                 </li>
-                <li className="flex items-center">
+                {/* <li className="flex items-center">
                   <ArrowRightIcon size='15px'></ArrowRightIcon>
                   <Link href="/en/whistleblowing" className="hover:text-customWhite" style={{marginLeft: '3px'}}>Whistleblowing</Link>
-                </li>
+                </li> */}
               </ul>
             </div>
             <div className="col-span-1">
