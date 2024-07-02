@@ -56,7 +56,7 @@ const Navbar = () => {
 
   const changeLanguage = (url: string, newLang: string) => {
     console.warn("url", url);
-    if (url == "https://www.sirionsrl.com/en/whistleblowing") {
+    if (url == "https://www.sirionsrl.com/whistleblowing") {
       return "https://www.sirionsrl.com/en";
     } else {
       const urlParts = url.split("/");
