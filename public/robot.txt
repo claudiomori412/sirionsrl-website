@@ -1,0 +1,14 @@
+User-agent: *
+Disallow: /
+
+Allow: /$
+Allow: /company
+Allow: /contact
+Allow: /know-how
+Allow: /products
+Allow: /sustainability
+Allow: /technology
+Allow: /whistleblowing
+
+
+Sitemap: https://sirionsrl.com/sitemap.xml
