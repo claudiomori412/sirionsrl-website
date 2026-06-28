@@ -5,6 +5,13 @@ import TechImg2 from './../../../img/technology/arzuffi.jpeg'
 import TechImg3 from './../../../img/technology/engel 800t.jpeg'
 import TechImg8 from './../../../img/technology/lab new 1.jpeg'
 import TechImg10 from './../../../img/technology/posaggio saldatura fp.jpeg'
+import news1 from './../../../img/technology/news/1.webp'
+import news2 from './../../../img/technology/news/2.webp'
+import news3 from './../../../img/technology/news/3.webp'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 import EndPage from '../../ui/components/end-page';
 import Footer from '@/app/ui/dashboard-en/footer';
 import Navbar from '@/app/ui/dashboard-en/navbar';
@@ -70,6 +77,53 @@ export default function Page() {
                         <p className="mb-2 text-customWhite">
                         Sirion presents its new laboratory, recently renovated and equipped with cutting-edge technologies to ensure precision and reliability in product testing and analysis. Among its main features are a photometric chamber, a corrosion test bench, a rain and dust resistance test bench, a static humidity cell, a vibrating bench, and a climatic cell. Our commitment to quality is reflected in the rigorous testing process, which ensures maximum performance and durability of components over time. Learn more about our testing and analysis capabilities and how we can contribute to the success of your projects in the automotive sector.</p>
                     </div>
+                </div>
+            </div>
+
+            <div className="bg-customWhite py-14 px-6">
+                <h2 className="text-center text-4xl font-bold text-customBlack mb-4">Latest News</h2>
+                <p className="text-center text-customBlack text-lg mb-10 max-w-2xl mx-auto font-bold">ERDF OP 2021-2027 Digitalisation and productive efficiency of enterprises
+                    Action I.1ii.2 &quot;Promoting the digital transition of the business system&quot;.
+                    Action I.1iii.1 &quot;Supporting the competitiveness and sustainable transition of the regional
+                    production system&quot;
+                </p>
+                <p className="text-center text-customBlack text-lg mb-10 max-w-2xl mx-auto">
+                    The project involved the acquisition and installation of a horizontal 1400T Bicolour injection moulding press
+                    with 2 injectors and a rotary table, representing a total investment of &euro;390,000.00, aimed at
+                    boosting the company&apos;s production capacity and implementing advanced technologies
+                    to support moulding processes.
+                    The investment is part of the development and innovation path undertaken by Sirion S.r.l., aimed at
+                    improving operational efficiency, product quality, and the company&apos;s competitiveness in
+                    its reference market.
+                </p>
+
+                <p className="text-center text-customBlack text-xl max-w-2xl mx-auto mb-5 font-bold">New injection moulding press for plastic moulding Borche 1400T Bicolour
+                </p>
+
+                <div className="max-w-4xl mx-auto">
+                    <Swiper
+                        spaceBetween={20}
+                        modules={[Navigation]}
+                        slidesPerView={1}
+                        centeredSlides={true}
+                        navigation={true}
+                    >
+                        <SwiperSlide>
+                            <div className="flex flex-col items-center">
+                                <Image src={news2} alt="News 2" className="w-full object-cover" />
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="flex flex-col items-center">
+                                <Image src={news1} alt="News 1" className="w-full object-cover" />
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="flex flex-col items-center">
+                                <Image src={news3} alt="News 3" className="w-full object-cover" />
+                            </div>
+                        </SwiperSlide>
+                    </Swiper>
                 </div>
             </div>
 

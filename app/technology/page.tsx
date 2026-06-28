@@ -5,6 +5,13 @@ import TechImg2 from './../../img/technology/arzuffi.jpeg'
 import TechImg3 from './../../img/technology/engel 800t.jpeg'
 import TechImg8 from './../../img/technology/lab new 1.jpeg'
 import TechImg10 from './../../img/technology/posaggio saldatura fp.jpeg'
+import news1 from './../../img/technology/news/1.webp'
+import news2 from './../../img/technology/news/2.webp'
+import news3 from './../../img/technology/news/3.webp'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 import EndPage from '../ui/components/end-page';
 import Footer from '../ui/dashboard/footer';
 import Navbar from '../ui/dashboard/navbar';
@@ -66,7 +73,54 @@ Sirion presenta il suo nuovo laboratorio, recentemente ristrutturato e dotato di
                 </div>
             </div>
 
-            
+            <div className="bg-customWhite py-14 px-6">
+                <h2 className="text-center text-4xl font-bold text-customBlack mb-4">Ultime novità</h2>
+                <p className="text-center text-customBlack text-lg mb-10 max-w-2xl mx-auto font-bold">PR FESR 2021-2027 Digitalizzazione e efficientamento produttivo delle imprese
+                    Azione I.1ii.2 “Promuovere la transizione digitale del sistema imprenditoriale”.
+                    Azione I.1iii.1 “Supporto alla competitività e alla transizione sostenibile del sistema produttivo
+                    regionale”
+                </p>
+                <p className="text-center text-customBlack text-lg mb-10 max-w-2xl mx-auto">
+                    Il progetto ha riguardato l'acquisizione e l'installazione di una pressa orizzontale 1400T Bicolore
+                    con 2 iniettori e tavola rotante, per un investimento complessivo pari a € 390.000,00, finalizzato al
+                    potenziamento della capacità produttiva aziendale e all'implementazione di tecnologie avanzate a
+                    supporto dei processi di stampaggio.
+                    L'investimento si inserisce nel percorso di sviluppo e innovazione intrapreso da Sirion S.r.l., volto a
+                    migliorare l'efficienza operativa, la qualità dei prodotti realizzati e la competitività dell'impresa nel
+                    mercato di riferimento.
+                </p>
+
+                <p className="text-center text-customBlack text-xl max-w-2xl mx-auto mb-5 font-bold">Nuova pressa ad iniezione per stampaggio plastico Borche 1400T Bicolor
+                </p>
+
+                <div className="max-w-4xl mx-auto">
+                    <Swiper
+                        spaceBetween={20}
+                        modules={[Navigation]}
+                        slidesPerView={1}
+                        centeredSlides={true}
+                        navigation={true}
+                    >
+                       
+                        <SwiperSlide>
+                            <div className="flex flex-col items-center">
+                                <Image src={news2} alt="Novità 2" className="w-full object-cover" />
+                            </div>
+                        </SwiperSlide>
+                         <SwiperSlide>
+                            <div className="flex flex-col items-center">
+                                <Image src={news1} alt="Novità 1" className="w-full object-cover" />
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="flex flex-col items-center">
+                                <Image src={news3} alt="Novità 3" className="w-full object-cover" />
+                            </div>
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
+            </div>
+
 <EndPage text1={"Ricerca e Innovazione"} text2={"Scopri come Sirion si impegna nella ricerca continua per innovare e soddisfare le esigenze dei clienti nel settore automobilistico."} text3={"Contattaci"} href={"/contact"}></EndPage>
 <Footer></Footer>
         </>
